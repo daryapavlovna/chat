@@ -1,0 +1,35 @@
+.conversation {
+  box-shadow: 0px 2px 7px grey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  .pull-left {
+    width: 20%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .media-body {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .div-link {
+    background-color: darksalmon;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 80px;
+    margin-right: 10px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: 1s box-shadow;
+  }
+
+  .div-link:hover {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    color: maroon;
+  }
+}

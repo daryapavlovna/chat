@@ -1,0 +1,49 @@
+.msg-container {
+  margin-bottom: 20px;
+  .avatar {
+    width: 20%;
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+  .messages {
+    .time {
+      font-size: 14px;
+      color: grey;
+    }
+  }
+
+  .msg-receive {
+    width: 75%;
+    float: left;
+
+    .message {
+      background-color: white;
+      border-radius: 10px;
+      margin-right: 10px;
+      padding: 5px;
+    }
+  }
+
+  .base-sent {
+    float: right;
+    margin-bottom: 15px;
+
+    .avatar {
+      float: left;
+    }
+    .message {
+      background-color: white;
+      border-radius: 10px;
+      margin-right: 10px;
+      padding: 5px;
+    }
+  }
+
+  .msg-sent {
+    padding: 5px;
+  }
+}
+

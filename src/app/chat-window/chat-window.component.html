@@ -1,0 +1,25 @@
+<div class="icon" (click)="iconClick()">
+  <img src="./../../assets/img/icon.png" alt="img">
+</div>
+<div class="chat-window-container" *ngIf="condition">
+  <div class="panel-heading top-bar">
+    <div class="panel-title-container">
+      <h3 class="panel-title">
+        <span class="glyphicon glyphicon-comment"></span>
+        Chat - {{currentThread.name}}
+      </h3>
+    </div>
+    <div class="panel-buttons-container"></div>
+  </div>
+  <div class="panel-body msg-container-base">
+    <app-chat-message *ngFor="let message of messages | async" [message]="message"></app-chat-message>
+  </div>
+  <div class="panel-footer">
+    <input type="text" class="input form-control"
+           placeholder="Write your message here..." [(ngModel)]="draftMessage.text"
+           (keydown.enter)="onEnter($event)"/><br>
+    <div class="input-group-btn">
+      <button class="btn-chat" (click)="onEnter($event)">Send</button>
+    </div>
+  </div>
+</div>

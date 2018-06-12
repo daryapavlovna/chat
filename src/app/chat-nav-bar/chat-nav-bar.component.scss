@@ -1,0 +1,17 @@
+.navbar-default {
+  background-color: bisque;
+  box-shadow: 2px 2px 7px grey;
+  margin-bottom: 50px;
+
+  .container-fluid {
+    display: flex;
+
+    .navbar-header {
+      width: 30%;
+      justify-content: space-around;
+    }
+  }
+}
+.logo {
+  width: 30%;
+}
