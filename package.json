@@ -23,7 +23,9 @@
     "@types/lodash": "^4.14.109",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
     "moment": "^2.22.2",
+    "open-iconic": "^1.1.1",
     "rxjs": "^6.0.0",
     "uuid": "^3.2.1",
     "zone.js": "^0.8.26"

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Preplay';
+  src: url('./../../assets/fonts/11862.otf') format('truetype');
+}
+
 .navbar-default {
   background-color: bisque;
   box-shadow: 2px 2px 7px grey;
@@ -5,13 +10,26 @@
 
   .container-fluid {
     display: flex;
+    padding: 5px 30px;
 
-    .navbar-header {
-      width: 30%;
-      justify-content: space-around;
+    h2 {
+      font-family: 'Preplay';}
+  }
+
+  @media screen and(max-width: 700px) {
+    h2 {
+      display: none;
     }
   }
-}
-.logo {
-  width: 30%;
-}
+
+    .navbar-header {
+      width: 100px;
+      justify-content:center;
+
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+
+

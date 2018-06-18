@@ -1,25 +1,45 @@
-<div class="icon" (click)="iconClick()">
-  <img src="./../../assets/img/icon.png" alt="img">
+<div data-toggle="modal" data-target="#modal" class="icon">
+  <span class="oi oi-chat"></span>
+  <!--<img src="./../../assets/img/icon.png" alt="img">-->
 </div>
-<div class="chat-window-container" *ngIf="condition">
-  <div class="panel-heading top-bar">
-    <div class="panel-title-container">
-      <h3 class="panel-title">
-        <span class="glyphicon glyphicon-comment"></span>
-        Chat - {{currentThread.name}}
-      </h3>
-    </div>
-    <div class="panel-buttons-container"></div>
-  </div>
-  <div class="panel-body msg-container-base">
-    <app-chat-message *ngFor="let message of messages | async" [message]="message"></app-chat-message>
-  </div>
-  <div class="panel-footer">
-    <input type="text" class="input form-control"
-           placeholder="Write your message here..." [(ngModel)]="draftMessage.text"
-           (keydown.enter)="onEnter($event)"/><br>
-    <div class="input-group-btn">
-      <button class="btn-chat" (click)="onEnter($event)">Send</button>
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="panel-title">
+          Chat - {{currentThread.name}}
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-chat-message *ngFor="let message of messages | async" [message]="message"></app-chat-message>
+      </div>
+      <div class="modal-footer">
+        <div class="panel-footer">
+          <input type="text" class="input form-control"
+                 placeholder="Write your message here..." [(ngModel)]="draftMessage.text"
+                 (keydown.enter)="onEnter($event)"/><br>
+            <button class="btn-chat btn btn-success" (click)="onEnter($event)">Send</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!--<div class="chat-window-container" *ngIf="condition">-->
+      <!--<h3 class="panel-title">-->
+        <!--Chat - {{currentThread.name}}-->
+      <!--</h3>-->
+      <!--<app-chat-message *ngFor="let message of messages | async" [message]="message"></app-chat-message>-->
+  <!--<div class="panel-footer">-->
+    <!--<input type="text" class="input form-control"-->
+           <!--placeholder="Write your message here..." [(ngModel)]="draftMessage.text"-->
+           <!--(keydown.enter)="onEnter($event)"/><br>-->
+    <!--<div class="input-group-btn">-->
+      <!--<button class="btn-chat btn btn-success" (click)="onEnter($event)">Send</button>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->

@@ -1,10 +1,12 @@
 <div class="msg-container" [ngClass]="{'base-sent': !incoming, 'base-receive': incoming}">
+
    <div class="avatar" *ngIf="!incoming">
      <img [src]="message.author.avatarSrc">
    </div>
+
    <div class="messages" [ngClass]="{'msg-sent': !incoming, 'msg-receive': incoming}">
      <p class="message">{{ message.text }}</p>
-     <span class="time">{{message.author.name}} • {{message.sentAt | fromNow}}</span>
+     <span class="time">{{ message.author.name }} • {{ message.sentAt | fromNow }}</span>
    </div>
 
   <div class="avatar" *ngIf="incoming">

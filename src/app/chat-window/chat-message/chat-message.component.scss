@@ -1,5 +1,6 @@
 .msg-container {
   margin-bottom: 20px;
+
   .avatar {
     width: 20%;
     float: left;
@@ -43,7 +44,10 @@
   }
 
   .msg-sent {
+    width: 300px;
+    text-align: right;
     padding: 5px;
+    height: 3%;
   }
 }
 

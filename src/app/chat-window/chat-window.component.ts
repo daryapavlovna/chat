@@ -51,6 +51,7 @@ export class ChatWindowComponent implements OnInit {
   onEnter(event: any): void {
     this.sendMessage();
     event.preventDefault();
+    // const scroll = this.el.nativeElement.querySelector('chat-window-container');
   }
 
   iconClick(): void {
